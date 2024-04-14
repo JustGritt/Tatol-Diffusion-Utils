@@ -1,0 +1,18 @@
+---
+import pkg from '../../package.json' assert { type: 'json' };
+import { ViewTransitions } from 'astro:transitions';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Turtle Stable Utils — v{pkg.version}</title>
+		<meta name="copyright" content="MIT" />
+		<ViewTransitions />
+	</head>
+	<body class="bg-gray-50 dark:bg-gray-800 scrollbar scrollbar-w-3 scrollbar-thumb-rounded-[0.25rem] scrollbar-track-slate-200 scrollbar-thumb-gray-400 dark:scrollbar-track-gray-900 dark:scrollbar-thumb-gray-700" transition:persist>
+		<slot />
+	</body>
+</html>
